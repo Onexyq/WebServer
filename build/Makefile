@@ -2,7 +2,7 @@ CXX = g++
 CFLAGS = -std=c++14 -O2 -Wall -g 
 
 TARGET = TinyWebServer
-OBJS = ../code/server/*.cpp \
+OBJS = ../code/buffer/*.cpp ../code/log/*.cpp ../code/server/*.cpp\
        ../code/main.cpp
 
 all: $(OBJS)
