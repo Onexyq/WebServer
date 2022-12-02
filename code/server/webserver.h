@@ -18,24 +18,32 @@
 #include <arpa/inet.h>
 
 #include "../log/log.h"
+#include "../pool/sqlconnpool.h"
+#include "../pool/threadpool.h"
+#include "../pool/sqlconnRAII.h"
+#include "../http/httpconn.h"
 
 class WebServer final {
 public:
-	WebServer();
 	WebServer(uint port, uint timeout, int optLinger);
 	virtual ~WebServer();
 	WebServer(WebServer &&other);
+	void Start();
 
 private:
 	bool InitSocket();
 	static int SetFdNonblock(int fd);
 
-	uint port;
-	bool m_optLinger;
+	bool optLinger_;
 	bool isClose;
+	bool asDaemon;
+	uint port;
 	uint timeout;  	//miliseconds
 	int listenFd;
 	char *srcDir;
+
+	std::unique_ptr<ThreadPool> threadpool_;
+	std::unordered_map<int, HttpConn> users_;
 
 };
 

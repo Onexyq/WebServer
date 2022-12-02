@@ -5,6 +5,10 @@
 
 int main(int argc, char **argv) {
 
-	return 0;
+	//daemon(1, 0);
+
+	WebServer server(80, 60000, false);
+
+	server.Start();
 
 }

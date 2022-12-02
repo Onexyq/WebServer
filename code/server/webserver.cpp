@@ -10,24 +10,27 @@
 
 using namespace std;
 
-WebServer::WebServer() {
-	// TODO Auto-generated constructor stub
 
-}
-
-WebServer::WebServer(uint port = 80, uint timeoout = 600000, int optLinger =
-		false) :
-		port(port), timeout(timeoout), m_optLinger(optLinger) {
+WebServer::WebServer(uint port = 80, uint timeout = 600000, int optLinger = false) :
+		port(port), timeout(timeout), optLinger_(optLinger), isClose(false),
+		asDaemon(false){
 	// TODO Auto-generated constructor stub
 
 }
 
 WebServer::~WebServer() {
-	// TODO Auto-generated destructor stub
+	close (listenFd);
+	isClose = true;
+	delete srcDir;
+	SqlConnPool::Instance()->ClosePool();
 }
 
 WebServer::WebServer(WebServer &&other) {
 	// TODO Auto-generated constructor stub
+
+}
+
+void WebServer::Start() {
 
 }
 
@@ -43,7 +46,7 @@ bool WebServer::InitSocket() {
 	addr.sin_addr.s_addr = htonl(INADDR_ANY);
 	addr.sin_port = htons(port);
 	struct linger optLinger = { 0 };
-	if (m_optLinger) {
+	if (optLinger_) {
 		optLinger.l_onoff = 1;
 		optLinger.l_linger = 1;
 	}
