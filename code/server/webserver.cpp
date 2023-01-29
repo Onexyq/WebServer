@@ -12,7 +12,7 @@ using namespace std;
 
 
 WebServer::WebServer(
-				int port = 80, int trigMode = 3, int timeout = 60000, bool optLinger = false,
+				int port = 1166, int trigMode = 3, int timeout = 60000, bool optLinger = false,
 				int sqlPort = 3306, const char* sqlUser = "root", const  char* sqlPwd = "root",
             	const char* dbName = "webserver", int connPoolNum = 12, int threadNum = 6,
 				bool openLog = true, int logLevel = 1, int logQueSize = 1024
