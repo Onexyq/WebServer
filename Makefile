@@ -3,4 +3,4 @@ all:
 	cd build && make
 
 clean:
-	rm -rf ./bin/$(OBJS) $(TARGET)
+	rm -rf ./bin/$(TARGET)

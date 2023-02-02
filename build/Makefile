@@ -10,7 +10,7 @@ all: $(OBJS)
 	$(CXX) $(CFLAGS) $(OBJS) -o ../bin/$(TARGET)  -pthread -L/usr/lib64/mysql -lmysqlclient
 
 clean:
-	rm -rf ../bin/$(OBJS) $(TARGET)
+	rm -rf ../bin/$(TARGET)
 
 
 
