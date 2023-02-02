@@ -16,13 +16,11 @@ HttpConn::HttpConn() {
 	fd_ = -1;
 	addr_ = { 0 };
 	isClose_ = true;
-}
-;
+};
 
 HttpConn::~HttpConn() {
 	Close();
 }
-;
 
 void HttpConn::init(int fd, const sockaddr_in &addr) {
 	assert(fd > 0);
@@ -50,7 +48,7 @@ void HttpConn::Close() {
 int HttpConn::GetFd() const {
 	return fd_;
 }
-;
+
 
 struct sockaddr_in HttpConn::GetAddr() const {
 	return addr_;
@@ -85,7 +83,7 @@ ssize_t HttpConn::write(int *saveErrno) {
 		}
 		if (iov_[0].iov_len + iov_[1].iov_len == 0) {
 			break;
-		} /* 传输结束 */
+		} 
 		else if (static_cast<size_t>(len) > iov_[0].iov_len) {
 			iov_[1].iov_base = (uint8_t*) iov_[1].iov_base
 					+ (len - iov_[0].iov_len);

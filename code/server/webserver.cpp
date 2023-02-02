@@ -1,7 +1,7 @@
 /*
  *	@File: webserver.cpp
  *	@Author: xueey
- * @Date: 2022-09
+ *  @Date: 2022-09
  *	@copyleft Apache 2.0
  *
  */
@@ -21,11 +21,19 @@ WebServer::WebServer(
             timer_(new HeapTimer()), threadpool_(new ThreadPool(threadNum)), epoller_(new Epoller())
 {
 
-	srcDir = getcwd(nullptr, 256);
+    srcDir = getcwd(nullptr, 256);
     assert(srcDir);
+    
+    char *path = (char*) malloc(256);
+    char dir[256] = "/code/server";
+    int len = strlen(srcDir) - strlen(dir);
+    memcpy(path, srcDir, len);
+    HttpConn::srcDir = path;
+    strncat(path, "/resources/", 16);
     strncat(srcDir, "/resources/", 16);
+    
     HttpConn::userCount = 0;
-    HttpConn::srcDir = srcDir;
+    
     SqlConnPool::Instance()->Init("localhost", sqlPort, sqlUser, sqlPwd, dbName, connPoolNum);
 
     InitEventMode(trigMode);
@@ -108,6 +116,7 @@ void WebServer::Start() {
                 DealRead(&users_[fd]);
             }
             else if(events & EPOLLOUT) {
+
                 assert(users_.count(fd) > 0);
                 DealWrite(&users_[fd]);
             } else {

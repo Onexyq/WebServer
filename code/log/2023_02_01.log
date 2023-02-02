@@ -1,0 +1,14 @@
+2023-02-01 15:31:30.084780 [info] : ========== Server init ==========
+2023-02-01 15:31:30.084802 [info] : Port:1188, OpenLinger: false
+2023-02-01 15:31:30.084807 [info] : Listen Mode: ET, OpenConn Mode: ET
+2023-02-01 15:31:30.084811 [info] : LogSys level: 1
+2023-02-01 15:31:30.084814 [info] : srcDir: /home/yiqi/桌面/GitHub/WebServer/code/resources/
+2023-02-01 15:31:30.084818 [info] : SqlConnPool num: 12, ThreadPool num: 6
+2023-02-01 15:31:30.084822 [info] : ========== Server start ==========
+2023-02-01 15:32:37.712549 [info] : Client[18](127.0.0.1:20712) in, userCount:1
+2023-02-01 15:32:37.713016 [info] : Client[18] in!
+2023-02-01 15:32:39.902011 [info] : Client[18] quit!
+2023-02-01 15:32:39.902212 [info] : Client[18](127.0.0.1:20712) quit, UserCount:0
+2023-02-01 15:33:37.895294 [info] : Client[18] quit!
+2023-02-01 15:34:24.700905 [info] : Client[18](192.168.31.209:42439) in, userCount:1
+2023-02-01 15:34:24.701213 [info] : Client[18] in!

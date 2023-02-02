@@ -1,0 +1,23 @@
+2023-02-02 15:06:06.858127 [info] : ========== Server init ==========
+2023-02-02 15:06:06.858146 [info] : Port:1188, OpenLinger: false
+2023-02-02 15:06:06.858150 [info] : Listen Mode: ET, OpenConn Mode: ET
+2023-02-02 15:06:06.858152 [info] : LogSys level: 1
+2023-02-02 15:06:06.858155 [info] : srcDir: /home/yiqi/桌面/GitHub/WebServ/resources/
+2023-02-02 15:06:06.858158 [info] : SqlConnPool num: 12, ThreadPool num: 6
+2023-02-02 15:06:06.858160 [info] : ========== Server start ==========
+2023-02-02 15:06:10.690496 [info] : Client[18](192.168.31.209:41717) in, userCount:1
+2023-02-02 15:06:10.690750 [info] : Client[18] in!
+2023-02-02 15:06:34.213271 [info] : ========== Server init ==========
+2023-02-02 15:06:34.213294 [info] : Port:1188, OpenLinger: false
+2023-02-02 15:06:34.213300 [info] : Listen Mode: ET, OpenConn Mode: ET
+2023-02-02 15:06:34.213375 [info] : LogSys level: 1
+2023-02-02 15:06:34.213387 [info] : srcDir: /home/yiqi/桌面/GitHub/WebServ/resources/
+2023-02-02 15:06:34.213391 [info] : SqlConnPool num: 12, ThreadPool num: 6
+2023-02-02 15:06:34.213394 [info] : ========== Server start ==========
+2023-02-02 15:06:34.530123 [info] : Client[18](192.168.31.209:9462) in, userCount:1
+2023-02-02 15:06:34.532363 [info] : Client[18] in!
+2023-02-02 15:06:34.532516 [info] : Client[19](192.168.31.209:9718) in, userCount:2
+2023-02-02 15:06:34.532550 [info] : Client[19] in!
+2023-02-02 15:06:41.396076 [info] : Client[21](192.168.31.209:11254) in, userCount:3
+2023-02-02 15:06:41.396129 [info] : Client[21] in!
+2023-02-02 15:06:43.430680 [info] : Client[18] quit!
