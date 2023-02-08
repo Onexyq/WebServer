@@ -1,6 +1,7 @@
 all:
 	mkdir -p bin
-	cd build && make
+	cd build && $(MAKE)
 
+.PHONY:
 clean:
 	rm -rf ./bin/$(TARGET)
